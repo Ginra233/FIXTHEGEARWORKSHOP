@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIX THE GEAR WORKSHOP - Toko Fixie Cirebon</title>
+    <meta name="description" content="Temukan sepeda fixie impianmu di FIX THE GEAR WORKSHOP, toko fixie terbaik di Cirebon. Kami hadir untuk kualitas, kecepatan, dan gaya dalam setiap gowesan.">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0b0b0b; /* Lebih gelap untuk kesan elegan */
+            --secondary-color: #e63946; /* Merah yang lebih soft dan berani */
+            --tertiary-color: #f1faee; /* Putih off-white yang hangat */
+            --dark-text: #1d3557; /* Biru tua yang sophisticated */
+            --light-text: #f1faee;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--tertiary-color);
+            margin: 0;
+            line-height: 1.8;
+            color: var(--dark-text);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 1.2rem 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            transition: background-color 0.3s ease;
+        }
+
+        .brand-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            color: var(--secondary-color);
+            margin: 0;
+            transition: transform 0.3s var(--transition-timing);
+        }
+
+        .brand-name:hover {
+            transform: scale(1.05);
+        }
+
+        .nav a {
+            color: var(--light-text);
+            text-decoration: none;
+            padding: 0.8rem 1.8rem;
+            font-weight: 600;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .nav a:hover {
+            color: var(--secondary-color);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(rgba(11,11,11,0.7), rgba(11,11,11,0.7)), url('https://images.unsplash.com/photo-1590483427906-81a171d34346?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            height: 650px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 2s var(--transition-timing);
+            padding: 0 20px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            animation: pulse 10s infinite;
+        }
+
+        .hero-content {
+            z-index: 2;
+        }
+
+        .hero-content h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4.5rem;
+            letter-spacing: 4px;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+            animation: textRise 1s var(--transition-timing);
+        }
+
+        .hero-content p {
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin: 10px 0 50px;
+            animation: textRise 1.2s var(--transition-timing);
+        }
+
+        .cta-button {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 20px 45px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: background-color 0.3s ease, transform 0.3s var(--transition-timing), box-shadow 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: textRise 1.4s var(--transition-timing);
+        }
+
+        .cta-button:hover {
+            background-color: #d12e3c;
+            transform: translateY(-7px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* --- CONTENT SECTIONS --- */
+        .content-section {
+            padding: 10rem 0;
+            display: grid;
+            gap: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 50px;
+            box-shadow: var(--shadow);
+            text-align: left;
+            transition: transform 0.5s var(--transition-timing), box-shadow 0.5s ease;
+            animation: fadeInUp 1.5s var(--transition-timing) forwards;
+            opacity: 0;
+        }
+
+        .card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .card:nth-child(1) { animation-delay: 0.2s; }
+        .card:nth-child(2) { animation-delay: 0.4s; }
+        .card:nth-child(3) { animation-delay: 0.6s; }
+        .card:nth-child(4) { animation-delay: 0.8s; }
+
+        .card h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+        }
+
+        .card h3 i {
+            margin-right: 15px;
+            font-size: 2.8rem;
+        }
+
+        .social-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .social-links li {
+            margin-bottom: 15px;
+        }
+
+        .social-links a {
+            color: var(--dark-text);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease, transform 0.3s var(--transition-timing);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+            transform: translateX(10px);
+        }
+        
+        .social-links a i {
+            margin-right: 15px;
+            font-size: 1.8rem;
+        }
+
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-top: 25px;
+            border: 3px solid var(--secondary-color);
+        }
+
+        #location-map {
+            width: 100%;
+            height: 450px;
+            border: 0;
+        }
+
+        .owners-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .owners-list li {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s var(--transition-timing);
+        }
+
+        .owners-list li:hover {
+            transform: scale(1.1);
+        }
+        
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 100px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        /* --- MEDIA QUERIES UNTUK TAMPILAN MOBILE --- */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 1rem 20px;
+            }
+
+            .brand-name {
+                font-size: 2rem;
+            }
+
+            .nav {
+                margin-top: 15px;
+            }
+            
+            .nav a {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                height: 500px;
+                padding: 0 10px;
+            }
+
+            .hero-content h2 {
+                font-size: 3rem;
+                letter-spacing: 2px;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 0.9rem;
+            }
+            
+            .content-section {
+                padding: 5rem 0;
+                gap: 30px;
+            }
+
+            .card {
+                padding: 30px;
+            }
+
+            .card h3 {
+                font-size: 2rem;
+            }
+
+            .card h3 i {
+                font-size: 2.2rem;
+            }
+
+            .social-links a {
+                font-size: 1rem;
+            }
+
+            .social-links a i {
+                font-size: 1.3rem;
+            }
+
+            #location-map {
+                height: 300px;
+            }
+        }
+
+        /* --- KEYFRAMES (ANIMATIONS) --- */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes textRise {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <span class="brand-name">FIX THE GEAR WORKSHOP</span>
+    <div class="nav">
+        <a href="#contact">Contact</a>
+        <a href="#privacy">Kebijakan Privasi</a>
+        <a href="#location">Lokasi</a>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>SEPEDA FIXIE? YA DI SINI!</h2>
+            <p>Jelajahi kebebasan di jalanan Cirebon dengan sepeda fixie andalanmu. Kami hadir untuk memenuhi hasratmu akan kecepatan dan gaya dalam setiap gowesan.</p>
+            <a href="https://wa.me/6281318296707" class="cta-button" target="_blank"><i class="fab fa-whatsapp"></i> Ngobrol Yuk!</a>
+        </div>
+    </section>
+
+    <div class="container content-section">
+        
+        <div class="card" id="contact">
+            <h3><i class="fas fa-phone-alt"></i> Contact</h3>
+            <p>Punya pertanyaan seputar sepeda fixie, ingin kustom, atau sekadar ingin tahu lebih banyak tentang komunitas kami? Jangan ragu untuk hubungi tim kami. Kami siap melayani dengan sepenuh hati dan pengetahuan teknis yang mendalam.</p>
+            <ul class="social-links">
+                <li><a href="https://wa.me/6281318296707" target="_blank"><i class="fab fa-whatsapp"></i> 0813-1829-6707</a></li>
+                <li><a href="https://www.instagram.com/fixthegearworkshop" target="_blank"><i class="fab fa-instagram"></i> @fixthegearworkshop</a></li>
+                <li><a href="mailto:workshopfixthegear@gmail.com"><i class="fas fa-envelope"></i> workshopfixthegear@gmail.com</a></li>
+            </ul>
+        </div>
+        
+        <div class="card" id="privacy">
+            <h3><i class="fas fa-shield-alt"></i> Kebijakan Privasi</h3>
+            <p>Kami sangat menghargai kepercayaan Anda. Seluruh data pribadi yang Anda berikan, baik saat konsultasi maupun pembelian, akan kami jaga kerahasiaannya dengan ketat. Kami berkomitmen untuk tidak menyebarkan atau menggunakan informasi Anda untuk kepentingan di luar layanan kami, tanpa persetujuan jelas dari Anda.</p>
+        </div>
+        
+        <div class="card" id="location">
+            <h3><i class="fas fa-map-marker-alt"></i> Lokasi</h3>
+            <p>Kunjungi langsung workshop kami di Cirebon. Nikmati pengalaman melihat koleksi sepeda fixie terbaik kami secara langsung, rasakan kualitasnya, dan ngobrol santai dengan para ahli kami. Kami percaya, sepeda adalah tentang koneksi, dan kami menantikan kehadiranmu!</p>
+            <div class="map-container">
+                <iframe id="location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15846.591040407156!2d108.54929845!3d-6.7118329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1d24c3a16499%3A0x6b90e668a6f233f2!2sStasiun%20Cirebon%20Prujakan!5e0!3m2!1sid!2sid!4v1724330686940!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3><i class="fas fa-users-cog"></i> Our Crew</h3>
+            <p>Kami adalah tim solid yang berdedikasi tinggi pada dunia sepeda fixie. Setiap gowesan, setiap modifikasi, dan setiap inovasi lahir dari tangan dan semangat para founder ini. Mari kenalan dengan mereka yang membuat **FIX THE GEAR WORKSHOP** menjadi sebuah rumah bagi para pecinta fixie</p>
+            <ul class="owners-list">
+                <li>VILLAN</li>
+                <li>RADIT</li>
+                <li>SYAHFAN</li>
+                <li>GIBRAN</li>
+            </ul>
+        </div>
+        
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>GOWES SANTUY, REZEKI MANTUY!</p>
+        <p>
+            <a href="https://wa.me/6281318296707" target="_blank"><i class="fab fa-whatsapp"></i> Kontak Kami</a> | 
+            <a href="https://www.instagram.com/fixthegearworkshop" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> | 
+            <a href="https://www.tiktok.com/@fixthegear?_t=ZS-8z2QGTy4DvF&_r=1" target="_blank"><i class="fab fa-Tiktok"></i> TIKTOK</a> | 
+            <a href="mailto:workshopfixthegear@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        </p>
+        <p>© 2025 FIX THE GEAR WORKSHOP. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
